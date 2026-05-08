@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Coding & Development Build",
+        "cpu": "Intel i5-13400",
+        "gpu": "Integrated UHD 730",
+        "ram": "32GB DDR5 5200MHz",
+        "storage": "1TB Gen4 NVMe",
+        "price": "₹55,000",
+        "cat": "entry"
+    },
+    {
+        "name": "Solid 1080p Streamer",
+        "cpu": "AMD Ryzen 5 5600",
+        "gpu": "NVIDIA RTX 3060 12GB",
+        "ram": "16GB DDR4 3200MHz",
+        "storage": "1TB Gen3 NVMe",
+        "price": "₹68,000",
+        "cat": "entry"
+    },
+    {
+        "name": "1440p Sweet Spot",
+        "cpu": "AMD Ryzen 5 7600",
+        "gpu": "AMD Radeon RX 7700 XT",
+        "ram": "32GB DDR5 6000MHz",
+        "storage": "1TB Gen4 NVMe",
+        "price": "₹95,000",
+        "cat": "mid"
+    },
+    {
+        "name": "Heavy Editing Workstation",
+        "cpu": "Intel i7-13700K",
+        "gpu": "NVIDIA RTX 4070 SUPER",
+        "ram": "64GB DDR5 6000MHz",
+        "storage": "2TB Gen4 NVMe",
+        "price": "₹1,45,000",
+        "cat": "high"
+    }
+]

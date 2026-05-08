@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gamer's Arsenal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="grid-overlay"></div>
+
+    <nav class="top-nav">
+        <div class="nav-brand" data-target="home">
+            <i class="ph-fill ph-crosshair"></i> ARSENAL
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active" data-target="home">Home</li>
+            <li class="nav-item" data-target="hardware">Hardware Lab</li>
+            <li class="nav-item" data-target="peripherals">The Vault</li>
+            <li class="nav-item" data-target="hub">Gamer's Hub</li>
+        </ul>
+    </nav>
+
+    <main id="app-container">
+        <section id="home" class="page-view active-page">
+            <div class="hero">
+                <div class="hero-badge">Project Proposal: Group A</div>
+                <h1>BUILD YOUR LEGACY</h1>
+                <p>A utility-based web portal for hardware configuration and gaming insights.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary nav-trigger" data-target="hardware">Enter Hardware Lab</button>
+                    <button class="btn btn-outline nav-trigger" data-target="hub">Explore Gamer's Hub</button>
+                </div>
+            </div>
+            
+            <div class="feature-cards">
+                <div class="feature-card nav-trigger" data-target="hardware">
+                    <i class="ph ph-cpu"></i>
+                    <h3>Compatibility Logic</h3>
+                    <p>Ensure your components fit perfectly before purchasing.</p>
+                </div>
+                <div class="feature-card nav-trigger" data-target="peripherals">
+                    <i class="ph ph-mouse"></i>
+                    <h3>Tactical Arsenal</h3>
+                    <p>Curated selections of competitive peripherals and displays.</p>
+                </div>
+                <div class="feature-card nav-trigger" data-target="hub">
+                    <i class="ph ph-trend-down"></i>
+                    <h3>Live Deal Tracker</h3>
+                    <p>Real-time API integration fetching digital game discounts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware" class="page-view hidden">
+            <div class="page-header">
+                <h2>HARDWARE LAB</h2>
+                <p>Curated builds and socket diagnostics.</p>
+            </div>
+
+            <div class="two-col-grid">
+                <div class="glass-panel">
+                    <div class="panel-head">
+                        <i class="ph ph-plugs-connected"></i>
+                        <h3>Socket Diagnostics</h3>
+                    </div>
+                    <div class="form-group">
+                        <label>Processor</label>
+                        <select id="cpu-select" class="cyber-input">
+                            <option value="none" disabled selected>Select CPU</option>
+                            <option value="am4">AMD Ryzen 5000 Series (AM4)</option>
+                            <option value="am5">AMD Ryzen 7000/8000 Series (AM5)</option>
+                            <option value="lga1700">Intel Core 12/13/14th Gen (LGA1700)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Motherboard</label>
+                        <select id="mobo-select" class="cyber-input">
+                            <option value="none" disabled selected>Select Motherboard</option>
+                            <option value="am4">B550 / X570 Chipset (AM4)</option>
+                            <option value="am5">B650 / X670 Chipset (AM5)</option>
+                            <option value="lga1700">B760 / Z790 Chipset (LGA1700)</option>
+                        </select>
+                    </div>
+                    <button id="run-diag-btn" class="btn btn-primary full-width">Check Compatibility</button>
+                    <div id="diag-output" class="status-box hidden"></div>
+                </div>
+
+                <div class="glass-panel">
+                    <div class="panel-head flex-between">
+                        <div class="title-group">
+                            <i class="ph ph-database"></i>
+                            <h3>Verified Builds</h3>
+                        </div>
+                        <select id="budget-filter" class="cyber-input small-input">
+                            <option value="all">All Budgets</option>
+                            <option value="entry">Entry-Level</option>
+                            <option value="mid">Mid-Range</option>
+                            <option value="high">Enthusiast</option>
+                        </select>
+                    </div>
+                    <div id="builds-container" class="data-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="peripherals" class="page-view hidden">
+            <div class="page-header">
+                <h2>THE VAULT</h2>
+                <p>Elite input devices for competitive advantage.</p>
+            </div>
+            <div class="three-col-grid">
+                <div class="glass-panel">
+                    <div class="panel-head"><i class="ph ph-mouse"></i><h3>Tactical Mice</h3></div>
+                    <div class="gear-card">
+                        <h4>Logitech G Pro X Superlight 2</h4>
+                        <p class="spec">Sensor: Hero 2 | Weight: 60g</p>
+                        <p class="desc">The industry standard for competitive gaming.</p>
+                    </div>
+                    <div class="gear-card">
+                        <h4>Razer DeathAdder V3 Pro</h4>
+                        <p class="spec">Sensor: Focus Pro 30K | Weight: 63g</p>
+                        <p class="desc">Ergonomic mastery with optical switches.</p>
+                    </div>
+                </div>
+                <div class="glass-panel">
+                    <div class="panel-head"><i class="ph ph-keyboard"></i><h3>Keyboards</h3></div>
+                    <div class="gear-card">
+                        <h4>Wooting 60HE+</h4>
+                        <p class="spec">Switches: Lekker Analog</p>
+                        <p class="desc">Features Rapid Trigger technology for instant resets.</p>
+                    </div>
+                    <div class="gear-card">
+                        <h4>SteelSeries Apex Pro TKL</h4>
+                        <p class="spec">Switches: OmniPoint 2.0</p>
+                        <p class="desc">Fully adjustable actuation points.</p>
+                    </div>
+                </div>
+                <div class="glass-panel">
+                    <div class="panel-head"><i class="ph ph-monitor"></i><h3>Displays</h3></div>
+                    <div class="gear-card">
+                        <h4>ZOWIE XL2566K</h4>
+                        <p class="spec">Panel: TN | Refresh: 360Hz</p>
+                        <p class="desc">Unmatched motion clarity with DyAc+ technology.</p>
+                    </div>
+                    <div class="gear-card">
+                        <h4>Alienware AW3423DWF</h4>
+                        <p class="spec">Panel: QD-OLED | Refresh: 165Hz</p>
+                        <p class="desc">Incredible colors and true blacks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hub" class="page-view hidden">
+            <div class="page-header">
+                <h2>GAMER'S HUB</h2>
+                <p>Digital economy tracking and system optimization guides.</p>
+            </div>
+            <div class="two-col-grid">
+                <div class="glass-panel">
+                    <div class="panel-head flex-between">
+                        <div class="title-group">
+                            <i class="ph ph-radar"></i>
+                            <h3>Live Deal Radar</h3>
+                        </div>
+                        <button id="fetch-api-btn" class="btn btn-icon"><i class="ph ph-arrows-clockwise"></i></button>
+                    </div>
+                    <div id="deals-container" class="data-list scrollable-box">
+                        <div class="empty-state">Click refresh to fetch data.</div>
+                    </div>
+                </div>
+                <div class="glass-panel">
+                    <div class="panel-head"><i class="ph ph-book-open-text"></i><h3>Performance Guides</h3></div>
+                    <div class="guide-item">
+                        <div class="guide-icon">01</div>
+                        <div class="guide-content">
+                            <h4>CS2 Optimal Settings</h4>
+                            <p>Maximize FPS and visibility for competitive matchmaking.</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">02</div>
+                        <div class="guide-content">
+                            <h4>GPU Undervolting</h4>
+                            <p>Lower temperatures without sacrificing core clock speeds.</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">03</div>
+                        <div class="guide-content">
+                            <h4>NVIDIA Reflex</h4>
+                            <p>Minimize system input lag in supported titles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
