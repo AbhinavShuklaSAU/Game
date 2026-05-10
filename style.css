@@ -159,8 +159,28 @@ body {
 .save-badge { background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 .empty-state { text-align: center; color: var(--text-muted); padding: 2rem; }
 
-/* Custom scrollbar for long deal lists */
 .scrollable-box { max-height: 400px; overflow-y: auto; padding-right: 10px; }
 .scrollable-box::-webkit-scrollbar { width: 6px; }
 .scrollable-box::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
 .scrollable-box::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 4px; }
+@media (max-width: 850px) {
+    .two-col-grid, .three-col-grid {
+        grid-template-columns: 1fr;
+    }
+    .top-nav {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 15px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}
